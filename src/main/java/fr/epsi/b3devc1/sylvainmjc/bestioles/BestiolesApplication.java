@@ -56,51 +56,58 @@ public class BestiolesApplication implements CommandLineRunner {
 //        System.out.println(" --- Scpecies --- ");
 //        this.speciesRepository.findAll().forEach(System.out::println);
 
-        System.out.println(" --- SpeciesRepository tests --- ");
-        System.out.println(" - findFirstByCommonName - ");
-        System.out.println(this.speciesRepository.findFirstByCommonName("Chien"));
+        // TP 4 & 5
 
-        System.out.println(" - findByLatinNameContainingIgnoreCase - ");
-        this.speciesRepository.findByLatinNameContainingIgnoreCase("canis").forEach(System.out::println);
+//        System.out.println(" --- SpeciesRepository tests --- ");
+//        System.out.println(" - findFirstByCommonName - ");
+//        System.out.println(this.speciesRepository.findFirstByCommonName("Chien"));
+//
+//        System.out.println(" - findByLatinNameContainingIgnoreCase - ");
+//        this.speciesRepository.findByLatinNameContainingIgnoreCase("canis").forEach(System.out::println);
+//
+//        System.out.println(" - findAllOrderByCommonNameAsc - ");
+//        this.speciesRepository.findAllOrderByCommonNameAsc().forEach(System.out::println);
+//
+//        System.out.println(" - findByCommonNameLike - ");
+//        this.speciesRepository.findByCommonNameLike("Chien").forEach(System.out::println);
+//
+//        System.out.println(" --- PersonRepository tests --- ");
+//
+//        System.out.println(" - findByLastnameOrFirstname - ");
+//        this.personRepository.findByLastnameOrFirstname("Doe", "John").forEach(System.out::println);
+//
+//        System.out.println(" - findByAgeGreaterThanEqual - ");
+//        this.personRepository.findByAgeGreaterThanEqual(30).forEach(System.out::println);
+//
+//        System.out.println(" - findByAgeBetween - ");
+//        this.personRepository.findByAgeBetween(20, 30).forEach(System.out::println);
+//
+//        Animal animal = this.animalRepository.findById(1).get();
+//        System.out.println(" - findByAnimal - ");
+//        this.personRepository.findByAnimal(animal).forEach(System.out::println);
+//
+//        System.out.println(" --- AnimalRepository tests --- ");
+//        Species species = this.speciesRepository.findById(1).get();
+//        System.out.println(" - findBySpecies - ");
+//        this.animalRepository.findBySpecies(species).forEach(System.out::println);
+//
+//        System.out.println(" - findByColorIn - ");
+//        this.animalRepository.findByColorIn(List.of("Blanc", "Noir")).forEach(System.out::println);
+//
+//        System.out.println(" - countBySex - ");
+//        System.out.println(this.animalRepository.countBySex("M"));
+//
+//        System.out.println(" - existsByAnimal - ");
+//        System.out.println(this.animalRepository.existsByAnimal(animal));
 
-        System.out.println(" - findAllOrderByCommonNameAsc - ");
-        this.speciesRepository.findAllOrderByCommonNameAsc().forEach(System.out::println);
 
-        System.out.println(" - findByCommonNameLike - ");
-        this.speciesRepository.findByCommonNameLike("Chien").forEach(System.out::println);
+        // TP6
 
-        System.out.println(" --- PersonRepository tests --- ");
+        System.out.println(" --- PersonRepositoryCustom tests --- ");
+        personRepository.generateRandomPersons(3).forEach(System.out::println);
 
-        System.out.println(" - findByLastnameOrFirstname - ");
-        this.personRepository.findByLastnameOrFirstname("Doe", "John").forEach(System.out::println);
-
-        System.out.println(" - findByAgeGreaterThanEqual - ");
-        this.personRepository.findByAgeGreaterThanEqual(30).forEach(System.out::println);
-
-        System.out.println(" - findByAgeBetween - ");
-        this.personRepository.findByAgeBetween(20, 30).forEach(System.out::println);
-
-        Animal animal = this.animalRepository.findById(1).get();
-        System.out.println(" - findByAnimal - ");
-        this.personRepository.findByAnimal(animal).forEach(System.out::println);
-
-
-        System.out.println(" --- AnimalRepository tests --- ");
-        Species species = this.speciesRepository.findById(1).get();
-        System.out.println(" - findBySpecies - ");
-        this.animalRepository.findBySpecies(species).forEach(System.out::println);
-
-        System.out.println(" - findByColorIn - ");
-
-        this.animalRepository.findByColorIn(List.of("Blanc", "Noir")).forEach(System.out::println);
-
-
-        System.out.println(" - countBySex - ");
-        System.out.println(this.animalRepository.countBySex("M"));
-
-
-        System.out.println(" - existsByAnimal - ");
-        System.out.println(this.animalRepository.existsByAnimal(animal));
-
+        personRepository.findAll().forEach(System.out::println);
+        personRepository.deletePersonsWithoutAnimals();
+        personRepository.findAll().forEach(System.out::println);
     }
 }
