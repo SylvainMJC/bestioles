@@ -37,7 +37,6 @@ public class BestiolesApplication implements CommandLineRunner {
     }
 
     public static void main(String[] args) {
-
         SpringApplication.run(BestiolesApplication.class, args);
     }
 
@@ -45,60 +44,60 @@ public class BestiolesApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 //        System.out.println(" --- Animals --- ");
-//        this.animalRepository.findAll().forEach(System.out::println);
+//        animalRepository.findAll().forEach(System.out::println);
 //
 //        System.out.println(" --- Persons --- ");
-//        this.personRepository.findAll().forEach(System.out::println);
+//        personRepository.findAll().forEach(System.out::println);
 //
 //        System.out.println(" --- Roles --- ");
-//        this.roleRepository.findAll().forEach(System.out::println);
+//        roleRepository.findAll().forEach(System.out::println);
 //
 //        System.out.println(" --- Scpecies --- ");
-//        this.speciesRepository.findAll().forEach(System.out::println);
+//        speciesRepository.findAll().forEach(System.out::println);
 
         // TP 4 & 5
 
 //        System.out.println(" --- SpeciesRepository tests --- ");
 //        System.out.println(" - findFirstByCommonName - ");
-//        System.out.println(this.speciesRepository.findFirstByCommonName("Chien"));
+//        System.out.println(speciesRepository.findFirstByCommonName("Chien"));
 //
 //        System.out.println(" - findByLatinNameContainingIgnoreCase - ");
-//        this.speciesRepository.findByLatinNameContainingIgnoreCase("canis").forEach(System.out::println);
+//        speciesRepository.findByLatinNameContainingIgnoreCase("canis").forEach(System.out::println);
 //
 //        System.out.println(" - findAllOrderByCommonNameAsc - ");
-//        this.speciesRepository.findAllOrderByCommonNameAsc().forEach(System.out::println);
+//        speciesRepository.findAllOrderByCommonNameAsc().forEach(System.out::println);
 //
 //        System.out.println(" - findByCommonNameLike - ");
-//        this.speciesRepository.findByCommonNameLike("Chien").forEach(System.out::println);
+//        speciesRepository.findByCommonNameLike("Chien").forEach(System.out::println);
 //
 //        System.out.println(" --- PersonRepository tests --- ");
 //
 //        System.out.println(" - findByLastnameOrFirstname - ");
-//        this.personRepository.findByLastnameOrFirstname("Doe", "John").forEach(System.out::println);
+//        personRepository.findByLastnameOrFirstname("Doe", "John").forEach(System.out::println);
 //
 //        System.out.println(" - findByAgeGreaterThanEqual - ");
-//        this.personRepository.findByAgeGreaterThanEqual(30).forEach(System.out::println);
+//        personRepository.findByAgeGreaterThanEqual(30).forEach(System.out::println);
 //
 //        System.out.println(" - findByAgeBetween - ");
-//        this.personRepository.findByAgeBetween(20, 30).forEach(System.out::println);
+//        personRepository.findByAgeBetween(20, 30).forEach(System.out::println);
 //
-//        Animal animal = this.animalRepository.findById(1).get();
+//        Animal animal = animalRepository.findById(1).get();
 //        System.out.println(" - findByAnimal - ");
-//        this.personRepository.findByAnimal(animal).forEach(System.out::println);
+//        personRepository.findByAnimal(animal).forEach(System.out::println);
 //
 //        System.out.println(" --- AnimalRepository tests --- ");
-//        Species species = this.speciesRepository.findById(1).get();
+//        Species species = speciesRepository.findById(1).get();
 //        System.out.println(" - findBySpecies - ");
-//        this.animalRepository.findBySpecies(species).forEach(System.out::println);
+//        animalRepository.findBySpecies(species).forEach(System.out::println);
 //
 //        System.out.println(" - findByColorIn - ");
-//        this.animalRepository.findByColorIn(List.of("Blanc", "Noir")).forEach(System.out::println);
+//        animalRepository.findByColorIn(List.of("Blanc", "Noir")).forEach(System.out::println);
 //
 //        System.out.println(" - countBySex - ");
-//        System.out.println(this.animalRepository.countBySex("M"));
+//        System.out.println(animalRepository.countBySex("M"));
 //
 //        System.out.println(" - existsByAnimal - ");
-//        System.out.println(this.animalRepository.existsByAnimal(animal));
+//        System.out.println(animalRepository.existsByAnimal(animal));
 
 
         // TP6
