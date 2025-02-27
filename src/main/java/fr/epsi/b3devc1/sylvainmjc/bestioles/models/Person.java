@@ -14,6 +14,9 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "age")
+    private Integer age;
+
     @Column(name = "firstname")
     private String firstname;
 
@@ -48,6 +51,7 @@ public class Person {
     public String toString() {
         return "Person{" +
                 "id=" + id +
+                ", age='" + age + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", login='" + login + '\'' +
